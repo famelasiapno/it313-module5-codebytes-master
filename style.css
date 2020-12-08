@@ -1,0 +1,778 @@
+@font-face {
+    font-family: "Aileron"; 
+    src: url("fonts/Aileron-Regular.otf");
+}
+
+@font-face {
+    font-family: "Open Sans"; 
+    src: url("fonts/OpenSans.ttf");
+}
+
+@font-face {
+    font-family: "Playfair Display"; 
+    src: url("fonts/PlayfairDisplay.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 0px;
+    background-image:url("media/main_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;          
+    background-position: center center;  
+    background-attachment: fixed;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: black;
+    line-height: 1.5em;	
+    letter-spacing: 1px; 
+    padding: 10px;
+}
+
+/* Universal Heading Styles
+Contributor/: Siapno, Maria Famela
+Description: The following are the universal styles for the headings.
+*/
+
+h1 {
+    text-align: center!important;
+    font-family: 'Playfair Display';
+}
+
+h4 {
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 2em;
+	line-height: 1.8;
+	color: rgba(20,20,20,0.83);
+	font-size: 20px;
+}
+
+h5 {
+    text-indent: 30px;
+    font-size: 15px;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+/* Container Styles
+Contributor/: De Guzman, Ana Maria; Siapno, Maria Famela; Tomilas, Crystelle Hannah
+Description: The following are the tab and panel container designs for the main tabs of the website.
+*/
+
+.tabContainer{
+    width: 100%;
+    height: 350px;
+}
+
+.tabContainer .buttonContainer button {
+    background-color: rgba(255, 255, 255, 0.692);
+    height: 20%;
+    width: 50%;
+    float: left;
+    outline:none;
+    border: 1px solid rgba(196, 187, 187, 0.76);
+    cursor: pointer;
+    padding: 10px;
+    font-family: 'Aileron';
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.tabContainer .buttonContainer button:hover{
+    background-color: rgba(202, 223, 255, 0.925);
+}
+
+.tabContainer .panel{
+    height: 85%;
+    background-color: rgba(255, 255, 255, 0.432);
+    color: #000;
+    text-align: center;
+    padding: 30px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    font-size: 22px;
+    display: block;
+}
+
+.tabContainer{
+    width:100%;
+    height:100%;
+    border: 2px #d3ad4794 solid;
+    border-radius: 10px;
+    padding:10px;
+    background-color: #ffffff75;
+}
+
+/* Default Displays
+Contributor/: Siapno, Maria Famela; Tomilas, Crystelle Hannah
+Description: The following are the designs for the default 
+displayed text upon launching the site.
+*/
+
+#default-message h1 {
+    padding-bottom: 20px;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-size: 40px;
+}
+
+#default-message p {
+    line-height: 0.9em;
+    font-family: 'Open Sans';
+    font-weight: 100px;
+    font-size: 20px;
+}
+
+#top-bar {
+    text-align: center;
+}
+
+/* Search Area Interface
+Contributor/: Siapno, Maria Famela; Batara, Eloiza
+Description: The following are styles for the search interface of the website.
+*/
+
+#search-area {
+    width: 55%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#search-bar {
+    font-family: 'Open Sans';
+}
+
+input, button {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px 10px;
+    margin: 0;
+}
+
+#search-form input[type= 'text']{
+    width: 100%;
+}
+
+#search-btn {
+    cursor: pointer;
+}
+
+.btn-container {
+    width: 7.5%;
+}
+
+#search-area .icon {
+    height: 15px;
+    width: 15px;
+}
+
+#random-section {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#random-section p {
+    font-family: "Playfair Display";
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+/* Sort Interface
+Contributor/s: De Guzman, Ana Maria
+Description: Layout design for the Sorting feature
+*/
+
+#sort-section {
+    width: 25%;
+}
+
+#sort-section p{
+    font-size: 15px;
+    width: 45%;
+    float: left;
+    padding-right: 5px;
+}
+
+#sort-section select {
+    cursor: pointer;
+    border-radius: 0;
+    width: 55%;
+    height: 38px;
+    margin-top: 10px;
+    font-family: 'Open Sans';
+    border-radius: 5px;
+    float: left;
+}
+
+/* Filter Interface
+Contributor/: De Guzman, Ana Maria; Batara, Eloiza
+Description: 
+*/
+
+.filter-div {
+    margin:10px;
+}
+
+.filter-div form {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family:'Open Sans';
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.filter-div form {
+    cursor: pointer;
+}
+
+/* Display Results Interface:
+Contributor/: Diaz, Jonathan; Siapno, Maria Famela
+Description: Layout design to display the results of the searched keyword.
+This includes the layout for the thumbnail that will be displayed, as well
+as some information about each meal.
+*/
+    
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: 120px 25px;
+}
+
+.display-result {
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+}
+    
+.display-result img {
+    width: 100%;
+    height: 100%;
+    border: 4px #fff solid;
+    border-radius: 2px; 
+}
+
+.meal-info {
+    opacity: 0;
+}
+    
+.display-result img {
+    width: 100%;
+    height: 100%;
+    border: 4px #fff solid;
+    border-radius: 2px; 
+}
+
+.display-result:hover .meal-info{
+    width: 100%;
+    height: 25%;
+    color: #000000;
+    background: #fff;
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 1em;
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Single meal container layout
+Contributor/s: De Guzman, Ana Maria; Diaz, Jonathan
+Description: 
+*/
+    
+.single-meal-container ul li {
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #fff;
+    display: inline-block;
+    color: #2d2013;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+
+.main {
+    border: 2px #b43f3f62 solid;
+    font-size: 17px;
+    border-radius: 1px;
+    margin-left: 325px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: #6fc2d667;
+    margin-top: 45px;
+}
+
+/*For the checkbox filtering options this is to display only the label without the checkbox icon */
+.area-checkbox input[type="checkbox"],.category-checkbox input[type="checkbox"] {
+    display:none;
+}
+
+/*Layout for the label options for the filter funtion*/
+.area-checkbox label,.category-checkbox label {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 5px 15px;
+    color: #555;
+    border-radius: 30px;
+    font-size: 15px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+    margin: 3px;
+}
+
+/*Layout when the user click the label it will change its color*/
+.area-checkbox input[type="checkbox"]:checked ~ label {
+    background: #6a79ff;
+    color:#fff;
+}
+
+.category-checkbox input[type="checkbox"]:checked ~ label {
+    background: #6a79ff;
+    color:#fff;
+}
+
+.filter-section button {
+    margin: 5px;
+}
+
+.filter-section p {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    font-family: 'Aileron';
+    font-size: 15px,bold;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Single Meal Interface
+Contributor/: Diaz, Jonathan; De Guzman, Ana Maria
+Description: The following styles are applied on the interface for
+displaying single meals.
+*/
+
+.single-meal {
+    margin: auto;
+    width: 70%;
+}
+
+.single-meal-container .single-meal-info img {
+    margin: 15px;
+    width: 300px;
+    border: 5px #fff solid;
+    float: left;
+}
+
+.single-meal-info {
+    float: left;
+}
+
+.single-meal-container p {
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.single-meal-container ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.single-meal-container ul li {
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: #fff;
+    display: inline-block;
+    color: #2d2013;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+
+/*Layout ingredients label
+Contributor/: De Guzman, Ana Maria
+Description: The following styles are applied on the list
+of ingredients of a single meal.
+*/
+.ingredients {
+    padding: 0px 30px;
+    border: 2px #000000 solid;
+    border-radius: 1px;
+    font-family: 'Open Sans'  
+}
+
+#nutrition-btn {
+    margin-top: 20px;
+    font-family: 'Open Sans';
+}
+
+/* Nutrition Facts Interface 
+Contributor/: Siapno, Maria Famela
+Description: The following styles are applied on the nutrition interface.
+for the nutrient facts.
+*/
+
+.nutrient-details {
+    font-family: 'Open Sans';
+    text-align: left;
+    border-radius: 1px;
+    margin-top: 30px;
+    margin-left: 615px;
+    margin-right: 300px;
+    padding: 9px;
+    background-color: #fff;
+    border: 9px double #000;
+    font-size: 12px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    line-height: 1.5em;
+    color: #000;
+}
+
+/* About Panel Interface 
+Contributor/: Siapno, Maria Famela
+Description: The following styles are applied on the about panel interface.
+for the nutrient facts.
+*/
+
+#about-area {
+    padding: 50px;
+    margin-top: 10px;
+}
+
+#about-area p {
+    font-size: 20px;
+    line-height: 1.6em;
+    margin-top: 40px;
+}
+
+
+/*Responsive layout with max-width 1300px 
+Contributor/: Diaz, Jonathan; Siapno, Maria Famela; Batara, Eloiza
+Description: The following are styles for the responsive layout
+with max-width of 1300px.
+*/
+@media only screen and (max-width: 1300px){
+
+    h1 {
+        font-size: 30px;
+    }
+    
+    h5 {
+        text-indent: 5px;
+        font-size: 10px;
+    }
+    
+    .nutrient-details {
+        margin-left: 10px;
+        margin-right: 12px;
+        padding: 8px;    
+        font-size: 10px;    
+    }
+
+    h4 {
+        line-height: 1;
+        font-size: 12px;
+    }
+
+
+    #default-message{
+        font-size: 12px;
+    }
+    
+    #search-area {
+        width: 70%
+    }
+    
+    .filter-div form {
+        max-width: 500px;
+        padding: 7px;
+    }
+
+    .area-checkbox label,.category-checkbox label {
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    .filter-section p {
+        width: 250px;
+        font-size: 5px,bold;
+    }
+
+    .meals {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 120px 25px;
+        margin-top: 20px;
+    }
+
+    .single-meal {
+        margin: 20px auto;
+        width: 20%;
+    }
+
+    .single-meal-container .single-meal-info img {
+        margin: 50px;
+        width: 210px;
+        float: auto;
+        }
+
+    .single-meal-container ul li {
+        border-radius: 8px;
+        font-size: 10px;
+        padding: 2px;
+        margin: 0 3px 3px 0;
+    }
+
+    .main {
+        font-size: 10px;
+        margin-left: 10px;
+        margin-right: 12px;
+        padding: 8px;
+    }
+
+    p span{
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 2;
+        position: relative;
+        bottom: 20px;
+    }
+
+    #about-area {
+        padding-top: 30px;
+    }
+}
+
+/*Responsive layout with max-width 800px
+Contributor/: Diaz, Jonathan; Siapno, Maria Famela
+Description: The following are styles for the responsive layout
+with max-width of 800px.
+*/
+
+@media (max-width: 900px) {
+    #search-area {
+        width: 95%;
+    }
+    
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 3px;
+    }
+
+    .display-result h3 {
+        font-size: large;
+    }
+
+    .display-result p {
+        font-size: large;
+    }
+}
+
+/*Responsive layout with max-width 700px
+Contributor/: Diaz, Jonathan; Siapno, Maria Famela
+Description: The following are styles for the responsive layout
+with max-width of 700px.
+*/
+
+@media (max-width: 700px) {
+    #search-area {
+        width: 100%;
+    }
+
+    .meals {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 80px;
+    }
+
+    #result-title {
+        font-size: small;
+    }
+
+    .display-result {
+        width: 100%;
+        height: 250px;
+        padding: 8px;
+    }
+
+    .display-result h3 {
+        font-size: large;
+        margin: 0.3px;
+    }
+
+    .display-result p {
+        font-size: large;
+    }
+}
+    
+/*Responsive layout with max-width 360px
+Contributor/: Diaz, Jonathan; Siapno, Maria Famela; Tomilas, Crystelle Hannah
+Description: The following are styles for the responsive layout
+with max-width of 360px, the mobile version.
+*/
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #search-area {
+        display: inline-block;
+    }
+
+    .btn-container{
+        display: inline-flex;
+        width: 30px;
+    }
+    
+    #top-bar img{
+        height: 125px;
+    }
+
+    #default-message h1 {
+        font-size: 20px;
+    }
+    
+    #default-message p {
+        line-height: 1.2em;
+        padding: 0px 10px 0px 10px;
+        font-size: 15px;
+    }
+
+    #search-bar {
+        height: 33px;
+        font-size: 12px;
+        width: 60%;
+    }
+
+    #search-area button {
+        height: 33px;
+        width: 33px;
+    }
+
+    #search-area .icon {
+        height: 14px;
+        width: 14px;
+    }
+
+    #search-area{
+        text-align: center;
+        width: 100%;
+    }
+    
+    #sort-section {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+    }
+
+    #sort-section select{
+        text-align: center;
+        width: 50%;
+        margin-top: 15px;
+        height: 30px;
+        font-size: 13px;
+        padding: 0;
+    }
+
+    #sort-section p {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    
+    .filter-div p {
+        font-size: 12px;
+    }
+
+    .random-section p {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        padding: 0px 10px;
+    }
+
+    .meals {
+        grid-template-columns: 1fr;
+        grid-gap: 70px;
+    }
+
+    #result-title {
+        font-size: small;
+    }
+
+    .display-result {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .display-result h3 {
+        font-size: large;
+    }
+
+    .display-result p {
+        font-size: large;
+    }
+
+    .single-meal-info p {
+        float: none;
+    }
+
+    .single-meal-container .single-meal-info img {
+        margin-bottom: 20px;
+        width: 180px;
+        border: 2px #fff solid;
+        float: none;
+    }
+
+    .tabContainer .panel {
+        padding: 5px;
+    }
+
+    #about-area {
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    #about-area p {
+        font-size: 15px;
+        line-height: 1.4em;
+    }
+
+    .ingredients {
+        font-size: 10px;  
+        padding: 0px 10px;
+    }
+
+    .ingredients p {
+        font-size: 13px;  
+    }
+
+    #nutrition-btn {
+        font-size: 13px;
+    }
+}
